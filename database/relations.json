@@ -1,0 +1,83 @@
+[   
+    {
+      "fullName": "Mick Broadstone",
+      "movieName":"Avatar",
+      "role":[
+        "actor",
+        "director",
+        "producer"
+      ]
+    },
+    {
+      "fullName": "Jhon Doe",
+      "movieName":"La vida es bella",
+      "role":[
+        "actor",
+        "director",
+        "producer"
+      ]
+    },
+    {
+      "fullName": "Daniel Radcliffe",
+      "movieName":"Harry Potter",
+      "role":[
+        "actor",
+        "producer"
+      ]
+    },
+    {
+      "fullName": "Emma Watson",
+      "movieName":"Harry Potter",
+      "role":[
+        "actor"
+      ]
+    },
+    {
+      "fullName": "Rupert Grint",
+      "movieName":"Harry Potter",
+      "role":[
+        "actor"
+      ]
+    },
+    {
+      "fullName": "Mark Hamill",
+      "movieName":"Star Wars",
+      "role":[
+        "actor",
+        "producer"
+      ]
+
+    },
+    {
+      "fullName": "Harrison Ford",
+      "movieName":"Star Wars",
+      "role":[
+        "actor",
+        "producer"
+      ]
+    },
+    {
+      "fullName": "Carrie Fisher",
+      "movieName":"Star Wars",
+      "role":[
+        "actor"
+      ]
+    },
+    {
+      "fullName": "Elijah Wood",
+      "movieName":"Lord of the Rings",
+      "role":[
+        "actor"
+      ]
+    },
+    {
+      "fullName": "Viggo Mortensen",
+      "movieName":"Lord of the Rings",
+      "role":[
+        "actor",
+        "director"
+      ]
+    }
+ 
+]
+ 
