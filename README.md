@@ -4,6 +4,8 @@ This project was developed as a technical test, in which we can see how you can 
 
 It is fully developed with Sequelize and Express.js.
 
+THIS PROJECT IS UNDER DEVELOPMENT
+
 ## Tools used 🛠️
 
 * [Git](https://git-scm.com/book/es/v2/Empezando-Instalando-Git) - Version Control
