@@ -37,8 +37,8 @@ npm run dev
 
 _Verify that you have installed the following programs on your computer:_
 
-* [Node.js](https://nodejs.org/es/) - Entorno de ejecución para JavaScript
-* [MySQL](https://www.mysql.com/es/) - Sistema de gestión de bases de datos relacional
+* [Node.js](https://nodejs.org/es/) - Runtime Environment
+* [MySQL](https://www.mysql.com/es/) - Relational database management system
 
 
 ## Database configuration 📦
