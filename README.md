@@ -11,7 +11,6 @@ THIS PROJECT IS UNDER DEVELOPMENT
 * [Git](https://git-scm.com/book/es/v2/Empezando-Instalando-Git) - Version Control
 * [Visual Studio Code](https://code.visualstudio.com/) - IDE
 * [Postman](https://www.getpostman.com/) - API's tests
-* [Visual Studo Code](https://code.visualstudio.com/) - IDE
 
 ## Built With 🛠
 
