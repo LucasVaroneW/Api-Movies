@@ -30,7 +30,7 @@ npm install
 
 2. Execute the project with the following command:
 ```
-npm start
+npm run dev
 ```
 
 
