@@ -6,18 +6,21 @@ const dataPersons = require('../persons.json')
 const dataRelations = require('../relations.json')
 
 
-module.exports = function dataJson(){
+module.exports = async function dataJson(){
 
-    dataRelations.map(relation => {
-        var splitedName = relation.fullName.split(' ')
+
+    for (let i = 0; i < dataRelations.length; i++) {
+        var splitedName = dataRelations[i].fullName.split(' ')
         const person = dataPersons.find(({name, lastName}) => name === splitedName[0] && lastName === splitedName[1])
-        const movie = dataMovies.find(({title}) => title === relation.movieName)
+        const movie = dataMovies.find(({title}) => title === dataRelations[i].movieName)
+    
+        var actor = dataRelations[i].role.includes('actor')
+        var director = dataRelations[i].role.includes('director')
+        var producer = dataRelations[i].role.includes('producer')
 
-        var actor = relation.role.includes('actor')
-        var director = relation.role.includes('director')
-        var producer = relation.role.includes('producer')
-        loadData(movie,person,actor,director,producer)
-    })
+        await loadData(movie,person,actor,director,producer)
+        
+    }
 };
 
 // Una persona puede participar de muchas peliculas
@@ -32,17 +35,21 @@ Movie.belongsToMany(Person, {
     timestamps: false
 })
 
+async function loadData (movie,person,actor,director,producer){
+    try{
+        await Movie.sync() 
+        const [movieData, createdMovie] = await Movie.findOrCreate({where: { title: movie.title },
+        defaults: {
+            year: movie.year
+        }})
 
-function loadData (movie,person,actor,director,producer){
-    (async () => {
-        
-        const movieData = await Movie.create({ title: movie.title ,year: movie.year})
-
-        const personData = await Person.create({ name: person.name ,lastName: person.lastName , age: person.age })
-
-        personData.addMovie(movieData,{through:{actor:actor,producer:producer,director:director}})
-        
-    })();
-}
+        await Person.sync() 
+        const [personData, createdPerson] = await Person.findOrCreate({where: { name: person.name,lastName: person.lastName},
+        defaults: {
+            age: person.age
+        }})        
+        personData.addMovie(movieData,{through:{actor:actor,producer:producer,director:director}})  
+    }catch (error) {}
+}   
 
 

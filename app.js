@@ -2,25 +2,20 @@ const express = require('express');
 const app = express()
 const sequelize = require('./database/db');
 const dataJson = require('./database/models/asociations')
-const routsMovies = require ('./routes/routsMovies')
-
-
-
+const routs = require ('./routes/routs')
 
 // Setting
-
 const PORT = 3000;
-
 
 // Routs
 app.get('/', function(req, res){
     console.log('Hello World!')
 });
 
-app.use(routsMovies)
+app.use(routs)
 
 // Start server and
-app.listen(3000, function(){
+app.listen(PORT, function(){
     console.log(`App listening on port http://localhost:${PORT}/`)
 
     // Conect with database and create tabls
